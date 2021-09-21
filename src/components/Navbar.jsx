@@ -1,0 +1,27 @@
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme)=>({
+  
+}));
+
+
+
+
+function Navbar() {
+  const classes = useStyles();
+  return (
+    <AppBar>
+        <Toolbar>
+        <Typography variant="h6" className={classes.logolg}>
+            News
+            </Typography>
+            <Typography variant="h6" className={classes.logolg}>
+            News
+            </Typography>
+        </Toolbar>
+    </AppBar>
+  );
+}
+
+export default Navbar;

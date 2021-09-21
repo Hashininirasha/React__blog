@@ -1,7 +1,5 @@
-import './App.css';
-
 import { makeStyles } from '@material-ui/core/styles';
-import Navbar from './components/Navbar';
+import Navbar from './Navbar';
 
 const useStyles = makeStyles((theme)=>({
   
@@ -10,13 +8,13 @@ const useStyles = makeStyles((theme)=>({
 
 
 
-function App() {
+function Feed() {
   const classes = useStyles();
   return (
     <div>
-      <Navbar />
+        <Navbar />
     </div>
   );
 }
 
-export default App;
+export default Feed;
