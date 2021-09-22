@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import { alpha } from '@material-ui/core/styles';
 import MailIcon from '@material-ui/icons/Mail';
-import { Notifications, Search } from '@material-ui/icons';
+import { Cancel, Notifications, Search } from '@material-ui/icons';
 import { useState } from 'react';
 
 const useStyles = makeStyles((theme)=>({
@@ -31,23 +31,31 @@ const useStyles = makeStyles((theme)=>({
     width:"50%",
     [theme.breakpoints.down('sm')]: {
       display: (props)=> (props.open ? "flex" : "none"),
+      width: "70%",
     },
+    
   },
   input:{
     color: "white",
     marginLeft: theme.spacing(1), 
+    
   },
   icons:{
    
     alignItems: "center",
     display: (props)=> (props.open ? "none" : "flex"),
-   
+    
   },
   badge:{
     marginRight: theme.spacing(2)
   },
   searchbutton:{
     marginRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      display: "none"
+    },
+  },
+  cancel: {
     [theme.breakpoints.up('sm')]: {
       display: "none"
     },
@@ -69,6 +77,7 @@ function Navbar() {
                 <InputBase
                 placeholder="Search..." 
                 className={classes.input}/>
+            <Cancel className={classes.cancel} onClick={() => setOpen(false)} />
                 
             </div>
             <div className={classes.icons}>
