@@ -1,7 +1,11 @@
+import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from './Navbar';
 
 const useStyles = makeStyles((theme)=>({
+  container: {
+    paddingTop :theme.spacing(2),
+  }
   
 }));
 
@@ -11,9 +15,9 @@ const useStyles = makeStyles((theme)=>({
 function Feed() {
   const classes = useStyles();
   return (
-    <div>
-        <Navbar />
-    </div>
+    <Container className={classes.container}>
+      Feed
+    </Container>
   );
 }
 
